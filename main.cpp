@@ -1,7 +1,9 @@
 #include <iostream>
 #include "juego15.h"
+#include <time.h>
 #include <conio.h>
 #include <cstdio>
+
 
 using namespace std;
 
@@ -9,6 +11,7 @@ int main()
 {
     CuadroMagico tablero;
 
+    time_t now;
     int opcion = 0;
     int dato = 0;
     char tecla;
@@ -20,7 +23,7 @@ int main()
     while(opcion != 27)
        {
                    cout<<" 1  --- Resolver Juego del 15 Humano"<<endl;
-                   cout<<" 2  --- Resolver Juego del 15 Maquina"<<endl;
+                   cout<<" 2  --- Resolver Juego del 15 Maquina Busqueda Voraz"<<endl;
                    cout<<" 27 --- Salir de la aplicacion"<<endl;
 
                    cout<<endl;
@@ -78,6 +81,16 @@ int main()
                        {
                            cout<<"Juego Completado con Exito"<<endl<<endl;
                        }
+                   }
+
+                   if(opcion == 2)
+                   {
+                        gana = tablero.comprobarGana();
+
+                        tablero.evaluarMaquina();
+
+
+
                    }
 
 

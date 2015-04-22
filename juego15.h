@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Lista.h"
 
 using namespace std;
 
@@ -6,12 +7,20 @@ class CuadroMagico
 {
   private:
 
-    int filas;
-    int columnas;
-    int **matriz;
+
 
 
   public:
+
+    int filas;
+    int columnas;
+    int **matriz;
+    int **checar;
+    int **combinacionGanadora;
+    Lista listaNodos;
+    Lista nodosVisitados;
+    Lista direccionInicialNodosVisitados;
+    Lista direccionInicialListaNodos;
 
     CuadroMagico();
     void inicializarTablero(int filas, int columnas);
@@ -22,5 +31,16 @@ class CuadroMagico
     int moverNumeroAbajo(int numero);
     int moverNumeroArriba(int numero);
     int comprobarGana();
+    void revolverTablero();
+    void calcularDistanciaManhattan();
+    void evaluarMaquina();
+    int checarMoverArriba();
+    int checarMoverAbajo();
+    int checarMoverDerecha();
+    int checarMoverIzquierda();
+    void verTableroChecar();
+
 
 };
+
+

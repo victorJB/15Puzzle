@@ -4,8 +4,12 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    juego15.cpp
+    Juego15.cpp \
+    Lista.cpp \
+    Nodo.cpp
 
 HEADERS += \
-    juego15.h
+    Juego15.h \
+    Lista.h \
+    Nodo.h
 
